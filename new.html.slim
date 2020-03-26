@@ -1,0 +1,7 @@
+h1 PTの新規登録
+
+.nav.justify-content-end
+  =link_to '全PT一覧', poketms_path, class: 'nav-link'
+
+= render partial: 'form', locals: { poketm: @poketm }
+

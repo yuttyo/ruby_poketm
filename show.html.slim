@@ -1,0 +1,84 @@
+h1 PT詳細
+
+.nav.justify-content-end
+  =link_to '全一覧', poketms_path, class: 'nav-link'
+table.table.table-bordered
+  thead
+    tr
+      th= Poketm.human_attribute_name(:ptname)
+      td= @poketm.ptname
+table.table.table-bordered
+  thead
+    tr
+      th= Poketm.human_attribute_name(:name)
+      th= Poketm.human_attribute_name(:character)
+      th= Poketm.human_attribute_name(:move)
+      th= Poketm.human_attribute_name(:move2)
+      th= Poketm.human_attribute_name(:move3)
+      th= Poketm.human_attribute_name(:move4)
+    tr
+      td= @poketm.name
+      td= @poketm.character
+      td= @poketm.move
+      td= @poketm.move7
+      td= @poketm.move12
+      td= @poketm.move19
+    tr
+      td= @poketm.name2
+      td= @poketm.character2
+      td= @poketm.move2
+      td= @poketm.move8
+      td= @poketm.move14
+      td= @poketm.move20
+    tr
+      td= @poketm.name3
+      td= @poketm.character3
+      td= @poketm.move3
+      td= @poketm.move9
+      td= @poketm.move15
+      td= @poketm.move21
+    tr
+      td= @poketm.name4
+      td= @poketm.character4
+      td= @poketm.move4
+      td= @poketm.move10
+      td= @poketm.move16
+      td= @poketm.move22
+    tr
+      td= @poketm.name5
+      td= @poketm.character5
+      td= @poketm.move5
+      td= @poketm.move11
+      td= @poketm.move17
+      td= @poketm.move23
+    tr
+      td= @poketm.name6
+      td= @poketm.character6
+      td= @poketm.move6
+      td= @poketm.move12
+      td= @poketm.move18
+      td= @poketm.move24
+table.table.table-bordered
+  thead
+    tr
+      th= Poketm.human_attribute_name(:summary)
+      td= simple_format(h(@poketm.summary), {}, sanitize: false, wrapper_tag: "div")
+- if @poketm.image?
+  table.table.table-bordered
+    thead
+      tr
+        #th= Poketm.human_attribute_name(:image)
+        tr= image_tag @poketm.image.url
+- if user_signed_in?
+  - if @poketm.favorited_by?(current_user)
+    p お気に入り解除:
+    = link_to @poketm.favorites.count, poketm_favorites_path(@poketm.id), method: :delete 
+  - else
+    p ↓お気に入り登録:
+    = link_to @poketm.favorites.count, poketm_favorites_path(@poketm.id), method: :post 
+- else
+  p  お気に入り数
+  = @poketm.favorites.count
+- if current_user.id == @user.id
+  =link_to '編集', edit_poketm_path, class: 'btn btn-primary mr-3'
+  =link_to '削除', @poketm, method: :delete, date: { confirm: "「#{@poketm.name}」を削除します。よろしいですか？"}, class: 'btn btn-danger'

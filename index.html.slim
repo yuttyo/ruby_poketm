@@ -1,0 +1,16 @@
+p class="text-center bg-warning" class="display-4" PT一覧
+=link_to '新規登録', new_poketm_path, class: 'btn btn-primary'
+
+.mb-3
+table.table.table-hover
+  thead.thead-default
+  tr
+    th= Poketm.human_attribute_name(:name)
+    th= Poketm.human_attribute_name(:ptname)
+    th= Poketm.human_attribute_name(:created_at)
+  tbody
+    - @poketm.each do |poketm|
+      tr
+        td= link_to poketm.user.name, user_path(poketm.user.id)
+        td= link_to poketm.ptname, poketm
+        td= poketm.created_at

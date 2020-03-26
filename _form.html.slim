@@ -1,0 +1,65 @@
+= form_with model: poketm, local: true do|f|
+  .form-group
+    =f.label :ptname
+    =f.text_field :ptname, class: 'form-control', id: 'poketm_ptname'
+  .form-row
+    .col-md-2
+      .form-group
+        =f.label :name
+        =f.text_field :name, class: 'form-control', id: 'poketm_name'
+        =f.text_field :name2, class: 'form-control', id: 'poketm_name2'
+        =f.text_field :name3, class: 'form-control', id: 'poketm_name3'
+        =f.text_field :name4, class: 'form-control', id: 'poketm_name4'
+        =f.text_field :name5, class: 'form-control', id: 'poketm_name5'
+        =f.text_field :name6, class: 'form-control', id: 'poketm_name6'
+    .col-md-2
+      .form-group
+        =f.label :character
+        =f.select :character, [["意地っ張り","意地っ張り"], ["寂しがり","寂しがり"],["やんちゃ","やんちゃ"],["図太い","図太い"],["腕白","腕白"],["呑気","呑気"],["控えめ","控えめ"],["おっとり","おっとり"],["うっかりや","うっかりや"],["冷静","冷静"],["穏やか","穏やか"],["慎重","慎重"],["生意気","生意気"],["臆病","臆病"],["せっかち","せっかち"],["陽気","陽気"],["無邪気","無邪気"],["無補正","無補正"]], prompt: "性格"
+        =f.select :character2, [["意地っ張り","意地っ張り"], ["寂しがり","寂しがり"],["やんちゃ","やんちゃ"],["図太い","図太い"],["腕白","腕白"],["呑気","呑気"],["控えめ","控えめ"],["おっとり","おっとり"],["うっかりや","うっかりや"],["冷静","冷静"],["穏やか","穏やか"],["慎重","慎重"],["生意気","生意気"],["臆病","臆病"],["せっかち","せっかち"],["陽気","陽気"],["無邪気","無邪気"],["無補正","無補正"]], prompt: "性格2"
+        =f.select :character3, [["意地っ張り","意地っ張り"], ["寂しがり","寂しがり"],["やんちゃ","やんちゃ"],["図太い","図太い"],["腕白","腕白"],["呑気","呑気"],["控えめ","控えめ"],["おっとり","おっとり"],["うっかりや","うっかりや"],["冷静","冷静"],["穏やか","穏やか"],["慎重","慎重"],["生意気","生意気"],["臆病","臆病"],["せっかち","せっかち"],["陽気","陽気"],["無邪気","無邪気"],["無補正","無補正"]], prompt: "性格3"
+        =f.select :character4, [["意地っ張り","意地っ張り"], ["寂しがり","寂しがり"],["やんちゃ","やんちゃ"],["図太い","図太い"],["腕白","腕白"],["呑気","呑気"],["控えめ","控えめ"],["おっとり","おっとり"],["うっかりや","うっかりや"],["冷静","冷静"],["穏やか","穏やか"],["慎重","慎重"],["生意気","生意気"],["臆病","臆病"],["せっかち","せっかち"],["陽気","陽気"],["無邪気","無邪気"],["無補正","無補正"]], prompt: "性格4"
+        =f.select :character5, [["意地っ張り","意地っ張り"], ["寂しがり","寂しがり"],["やんちゃ","やんちゃ"],["図太い","図太い"],["腕白","腕白"],["呑気","呑気"],["控えめ","控えめ"],["おっとり","おっとり"],["うっかりや","うっかりや"],["冷静","冷静"],["穏やか","穏やか"],["慎重","慎重"],["生意気","生意気"],["臆病","臆病"],["せっかち","せっかち"],["陽気","陽気"],["無邪気","無邪気"],["無補正","無補正"]], prompt: "性格5"
+        =f.select :character6, [["意地っ張り","意地っ張り"], ["寂しがり","寂しがり"],["やんちゃ","やんちゃ"],["図太い","図太い"],["腕白","腕白"],["呑気","呑気"],["控えめ","控えめ"],["おっとり","おっとり"],["うっかりや","うっかりや"],["冷静","冷静"],["穏やか","穏やか"],["慎重","慎重"],["生意気","生意気"],["臆病","臆病"],["せっかち","せっかち"],["陽気","陽気"],["無邪気","無邪気"],["無補正","無補正"]], prompt: "性格6"
+    .col-md-2
+      .form-group 
+        =f.label :move
+        =f.text_field :move, class: 'form-control', id: 'poketm_move'
+        =f.text_field :move2, class: 'form-control', id: 'poketm_move2'
+        =f.text_field :move3, class: 'form-control', id: 'poketm_move3'
+        =f.text_field :move4, class: 'form-control', id: 'poketm_move4'
+        =f.text_field :move5, class: 'form-control', id: 'poketm_move5'
+        =f.text_field :move6, class: 'form-control', id: 'poketm_move6'
+    .col-md-2
+      .form-group 
+        =f.label :move2
+        =f.text_field :move7, class: 'form-control', id: 'poketm_move7'
+        =f.text_field :move8, class: 'form-control', id: 'poketm_move8'
+        =f.text_field :move9, class: 'form-control', id: 'poketm_move9'
+        =f.text_field :move9, class: 'form-control', id: 'poketm_move9'
+        =f.text_field :move10, class: 'form-control', id: 'poketm_move10'
+        =f.text_field :move11, class: 'form-control', id: 'poketm_move11'
+    .col-md-2
+      .form-group 
+        =f.label :move3
+        =f.text_field :move12, class: 'form-control', id: 'poketm_move12'
+        =f.text_field :move13, class: 'form-control', id: 'poketm_move14'
+        =f.text_field :move15, class: 'form-control', id: 'poketm_move15'
+        =f.text_field :move16, class: 'form-control', id: 'poketm_move16'
+        =f.text_field :move17, class: 'form-control', id: 'poketm_move7'
+        =f.text_field :move18, class: 'form-control', id: 'poketm_move18'
+    .col-md-2
+      .form-group 
+        =f.label :move4
+        =f.text_field :move19, class: 'form-control', id: 'poketm_move19'
+        =f.text_field :move20, class: 'form-control', id: 'poketm_move20'
+        =f.text_field :move21, class: 'form-control', id: 'poketm_move21'
+        =f.text_field :move22, class: 'form-control', id: 'poketm_move22'
+        =f.text_field :move23, class: 'form-control', id: 'poketm_move23'
+        =f.text_field :move24, class: 'form-control', id: 'poketm_move24'
+  .form-group
+    =f.label :summary
+    =f.text_area :summary, rows:5, class: 'form-control', id: 'poketm_summary'
+  =f.label :image
+  =f.file_field :image
+  =f.submit nil, class: 'btn btn-primary'
